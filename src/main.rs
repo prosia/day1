@@ -3,11 +3,6 @@ use std::fs::File;
 use std::io::{self, prelude::*, BufReader};
 fn main() {
     let nums = read().unwrap();
-    // for line in &nums {
-    //     println!("{}", line);
-    // }
-
-    // let rng = 1..nums.len();
     let ct: i32 = (1..nums.len())
         .map(|i| if &nums[i] > &nums[i - 1] { 1 } else { 0 })
         .sum();
